@@ -35,7 +35,7 @@ posterior = posterior / sum(posterior)
 plot(x=p_grid,y=posterior,Geom.line)
 
 ### Sampling
-n_sample = 1*10^5
+n_sample = 10^5
 s =sample(p_grid,ProbabilityWeights(posterior),n_sample)
 
 w = map((p) -> rand(Binomial(9,p)),s)
